@@ -1,0 +1,5 @@
+﻿@{
+    //pgpgpg - here is where i use the param stuck into viewdata to toggle my layout...
+    //CAUTION - if you are setting your layout directly in your views, instead of here, you would need to do this in all of them instead....probably write a helper method to abstract this, though, if that's the case.
+    Layout = string.Format("~/Views/Shared/_Layout{0}.cshtml", ViewContext.Controller.ViewData["vdToggle"] ?? string.Empty);
+}
